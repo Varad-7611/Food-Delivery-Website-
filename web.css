@@ -1,0 +1,326 @@
+* {
+    --background: hsl(210, 100%, 97%);
+   
+    --foreground: hsl(339, 20%, 20%);
+    --primary: hsl(308, 56%, 85%);
+    --primary-foreground: hsl(210, 22%, 22%);
+    --secondary: hsl(196, 75%, 88%);
+    --secondary-foreground: hsl(210, 22%, 22%);
+    --accent: hsl(211, 86%, 70%);
+    --accent-foreground: hsl(210, 22%, 22%);
+    --destructive: hsl(0, 93%, 73%);
+    --destructive-foreground: hsl(210, 22%, 22%);
+    --muted: hsl(210, 100%, 95%);
+    --muted-foreground: hsl(210, 22%, 22%);
+    --card: hsl(210, 100%, 97%);
+    --card-foreground: hsl(210, 22%, 22%);
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(341, 20%, 22%);
+    --border: hsl(210, 40%, 80%);
+    --input: hsl(210, 40%, 56%);
+    --ring: hsl(210, 40%, 60%);
+    --radius: 1rem;
+  }
+
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+  }
+  
+   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+    
+    
+
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(210, 100%, 97%, 0.8), transparent);
+  }
+  
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-foreground);
+  }
+  
+  .hero-description {
+    margin-top: 16px;
+    font-size: 1.125rem;
+    color: var(--primary-foreground);
+  }
+  
+  .search-container {
+    margin-top: 32px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    background-color: var(--background);
+    color: var(--primary-foreground);
+    border: 1px solid var(--border);
+    outline: none;
+    transition: ring 0.2s ease;
+  }
+  
+  .search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+  }
+  
+  .food-categories {
+    background-color: var(--muted);
+    padding: 48px 0;
+    
+
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-foreground);
+    text-align: center;
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+  
+  .category-card {
+    background-color: var(--background);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-icon {
+    width: 64px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    font-size: 2rem;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+  
+  .category-name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.125rem;
+    color: var(--primary-foreground);
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    
+  }
+  
+  .popular-dishes {
+    background-color: var(--background);
+    padding: 48px 0;
+
+    
+  }
+  
+  .dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+  
+  .dish-card {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dish-image {
+    width: 300px;
+    height: 200px;
+    margin-left: 50rem;
+    margin-right: 50rem;
+    object-fit: cover;
+    display: flex;
+    display: inline-block;
+    
+    border-color: aqua;
+    border-radius: 10%;
+   
+  }
+  
+  .dish-content {
+    padding: 16px;
+    text-align: center;
+    
+  }
+  
+  .dish-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--primary-foreground);
+    text-align: center;
+  
+  }
+  
+  .dish-description {
+    margin-top: 8px;
+    color: var(--muted-foreground);
+    text-align: center;
+
+  }
+  
+  .dish-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+  }
+
+  .order-button{
+ margin: auto;
+
+  
+  }
+
+  .order-button:hover{
+
+background-color: var(--clr);
+letter-spacing: 0.25rem;
+box-shadow: 0 0 35px var(--clr);
+
+  }
+
+
+
+/* Homepage Container */
+.homepage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* About Section */
+.about-section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.about-section h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+
+
+/* Hover Effect */
+.about-section:hover {
+  background-color: lightblue;
+  transform: scale(1.02);
+
+
+}
+
+
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Social Icons */
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #0073e6; /* Change color on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Specific Colors for Social Platforms */
+.social-icon.facebook:hover {
+  color: #3b5998; /* Facebook color */
+}
+
+.social-icon.twitter:hover {
+  color: #1da1f2; /* Twitter color */
+}
+
+.social-icon.instagram:hover {
+  color: #e4405f; /* Instagram color */
+}
+
+.social-icon.linkedin:hover {
+  color: #0077b5; /* LinkedIn color */
+}
+
